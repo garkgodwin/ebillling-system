@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardQuickView"
+        android:elevation="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtBillIDVal"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/txtBillIDDesc"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtDueDate"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/txtPayementDateDesc"
+                app:layout_constraintTop_toBottomOf="@+id/txtPaymentDateVal" />
+
+            <TextView
+                android:id="@+id/txtPayementDateDesc"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/txtNetAmount"
+                app:layout_constraintTop_toBottomOf="@+id/txtEnergyDesc" />
+
+            <TextView
+                android:id="@+id/txtEmergyVal"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/txtBillIDVal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtNetAmount"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/txtCallNameVal"
+                app:layout_constraintTop_toBottomOf="@+id/txtEmergyVal" />
+
+            <TextView
+                android:id="@+id/txtCallNameVal"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Net amount:"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtBillIDDesc"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/txtEnergyDesc"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Read date"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/txtEmergyVal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtPaymentDateVal"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Due Date"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/txtEnergyDesc"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBillIDDesc"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="Bill ID:"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="#3F51B5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCallNameVal" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMeterRow"
+        android:elevation="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/dark_gray"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtMeterIDVal"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtMeterIDDesc"
+                app:layout_constraintStart_toEndOf="@+id/txtMeterIDDesc" />
+
+            <TextView
+                android:id="@+id/txtStatusDesc"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Status"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtStatusVal"
+                app:layout_constraintStart_toStartOf="@+id/txtStatusVal"
+                app:layout_constraintTop_toBottomOf="@+id/txtStatusVal" />
+
+            <TextView
+                android:id="@+id/txtCallNameVal"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Call Name Value"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtTotalKwhVal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtMeterIDDesc" />
+
+            <TextView
+                android:id="@+id/txtCallNameDesc"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Call Name"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtCallNameVal"
+                app:layout_constraintStart_toStartOf="@+id/txtCallNameVal"
+                app:layout_constraintTop_toBottomOf="@+id/txtCallNameVal" />
+
+            <TextView
+                android:id="@+id/txtTotalKwhDesc"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Total KwH"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtTotalKwhVal"
+                app:layout_constraintStart_toStartOf="@+id/txtTotalKwhVal"
+                app:layout_constraintTop_toBottomOf="@+id/txtTotalKwhVal" />
+
+            <TextView
+                android:id="@+id/txtTotalKwhVal"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Total Kwh Value"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtCallNameVal"
+                app:layout_constraintEnd_toStartOf="@+id/txtStatusVal"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txtCallNameVal" />
+
+            <TextView
+                android:id="@+id/txtIcpVal"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="ICP Value"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtIcpDesc"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="Installation Control Point:"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtIcpVal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtStatusVal"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Status Value"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtTotalKwhVal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txtTotalKwhVal" />
+
+            <TextView
+                android:id="@+id/txtMeterIDDesc"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="ID:"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="382dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/navy"
+                android:backgroundTint="@color/navy"
+                android:foreground="#3F51B5"
+                android:foregroundTint="#3F51B5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnUpdateMeter" />
+
+            <ImageButton
+                android:id="@+id/btnUpdateMeter"
+                android:layout_width="56dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/trans100"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pencil_edit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCallNameDesc" />
+
+            <ImageButton
+                android:id="@+id/btnDeleteMeter"
+                android:layout_width="56dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/trans100"
+                android:scaleType="fitCenter"
+                android:scaleY="1.3"
+                android:scaleX="1.3"
+                android:src="@drawable/trash_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtStatusDesc"
+                 />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

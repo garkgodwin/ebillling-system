@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#373737"
+    tools:context=".Billing.BillingFormActivity">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/title_back"
+        android:text="@string/billing_form"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="249dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnChangeSearch"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/txt_boarder"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spMeterBoards"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:scrollbarSize="7dp"
+                tools:layout_editor_absoluteX="28dp"
+                tools:layout_editor_absoluteY="71dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:background="#373737"
+            android:text="@string/choose_meter_board"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/txt_boarder"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etPrevRead"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/previous_reading"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="179dp" />
+
+            <EditText
+                android:id="@+id/etPresRead"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/present_reading"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="196dp"
+                tools:layout_editor_absoluteY="179dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etReadDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="@string/reading_date"
+                android:inputType="date"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="217dp" />
+
+            <EditText
+                android:id="@+id/etDueDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="@string/due_date"
+                android:inputType="date"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="196dp"
+                tools:layout_editor_absoluteY="217dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnChangeReadDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ripple"
+                android:text="@string/change_date"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="259dp" />
+
+            <Button
+                android:id="@+id/btnChangeDueDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ripple"
+                android:text="@string/change_date"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                tools:layout_editor_absoluteX="221dp"
+                tools:layout_editor_absoluteY="259dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="138dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etConsumptionUnit"
+                android:layout_width="363dp"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/consumption_unit"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="295dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:background="#373737"
+            android:text="@string/electricity_board"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/txt_boarder"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etFixedCharge"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/fixed_charge"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="388dp" />
+
+            <EditText
+                android:id="@+id/etEnergyCharge"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/energy_charge"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="196dp"
+                tools:layout_editor_absoluteY="388dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etTax"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/tax"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="427dp" />
+
+            <EditText
+                android:id="@+id/etOthers"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/others"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="196dp"
+                tools:layout_editor_absoluteY="427dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etBillAmount"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/bill_amount"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="465dp" />
+
+            <EditText
+                android:id="@+id/etInterest"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/interest"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="196dp"
+                tools:layout_editor_absoluteY="465dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etPrevBalance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/previous_balance"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="503dp" />
+
+            <EditText
+                android:id="@+id/etPrevInterest"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/previous_interest"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="196dp"
+                tools:layout_editor_absoluteY="503dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etNetAmount"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/net_amount"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="541dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:background="#373737"
+            android:text="@string/invoice"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/txt_boarder"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etPaidAmount"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/paid_amount"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="635dp" />
+
+            <EditText
+                android:id="@+id/etPaymentDateTime"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="33dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="@string/payment_date"
+                android:inputType="date"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#737373"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="197dp"
+                tools:layout_editor_absoluteY="635dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="200dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="62dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCPaymentDateTime"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple"
+                android:text="@string/change_date"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                tools:layout_editor_absoluteX="189dp"
+                tools:layout_editor_absoluteY="673dp"
+                android:layout_width="50dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:background="#373737"
+            android:text="@string/payment"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btnChangeSearch"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ripple"
+        android:text="@string/change"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+    <Button
+        android:id="@+id/btnBillingAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/ripple"
+        android:text="@string/add"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBillingClear"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout5" />
+
+    <Button
+        android:id="@+id/btnBillingClear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ripple"
+        android:text="@string/clear"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btnBillingAdd"
+        app:layout_constraintStart_toEndOf="@+id/btnBillingCancel"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout5" />
+
+    <Button
+        android:id="@+id/btnBillingCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ripple"
+        android:text="@android:string/cancel"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btnBillingClear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
